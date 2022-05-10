@@ -102,5 +102,8 @@ export NVM_DIR="$HOME/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias unfuck_gpg="killall gpg-agent && gpg-agent --daemon --no-grab -q"
+{{ if eq .environment "work" }}
+# Add DotDash Meredith specific aliases here
 alias oktaaws="$HOME/.aws/oktaaws"
 alias undd_awscli="cp -f $HOME/.aws/backups/meredith_credentials $HOME/.aws/credentials;cp -f $HOME/.aws/backups/meredith_config $HOME/.aws/config"
+{{ end }}
