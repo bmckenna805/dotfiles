@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+  name = Benjamin McKenna
+  email = {{ .email}}
+	signingkey = {{ .gpgkey }}
+[pull]
+	rebase = false
+[gpg]
+	program = /usr/local/bin/gpg
+[commit]
+  gpgsign = true
+[tag]
+  forceSignAnnotated = true
+  gpgSign = true

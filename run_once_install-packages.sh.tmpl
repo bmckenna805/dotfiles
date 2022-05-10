@@ -1,0 +1,47 @@
+#!/bin/bash -e
+{{ if eq .chezmoi.os "darwin" -}}
+brew tap 'homebrew/bundle'
+
+brew install \
+  ansible \
+  awscli \
+  certigo \
+  cfn-lint \
+  cli53 \
+  config-lint \
+  curl \
+  dos2unix \
+  flake8 \
+  gh \
+  git \
+  gnupg \
+  gnu-sed \
+  gnutls \
+  go \
+  jq \
+  json-yaml \
+  nmap \
+  openssl \
+  pinentry \
+  pinentry-mac \
+  pre-commit \
+  pyenv \
+  python@3.10 \
+  python@3.9 \
+  readline \
+  ruby \
+  saml2aws \
+  terraform \
+  tfswitch \
+  yaml2json \
+  wget \
+  vim
+
+{{ end -}}
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended || true
+
+# Install SpaceVim
+sh -c "$(curl -sLf https://spacevim.org/install.sh)" "" --unattended || true
+

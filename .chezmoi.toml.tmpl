@@ -1,0 +1,13 @@
+{{- $environment := promptString "environment" -}}
+[data]
+  environment = "{{ $environment }}"
+
+  {{ if eq $environment "home" }}
+  email = "benjamin.mckenna2@hotmail.com"
+  gpgkey = ""
+  {{ end }}
+
+  {{ if eq $environment "work" }}
+  email = "benjamin.mckenna@dotdashmdp.com"
+  gpgkey = "843CED7F"
+  {{ end }}
